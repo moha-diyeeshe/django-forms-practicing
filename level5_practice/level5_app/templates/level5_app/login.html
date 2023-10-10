@@ -1,0 +1,26 @@
+{% extends "level5_app/base.html" %}
+
+{% block body_block %}
+
+<div class="jumbotron">
+    <h1>Please login</h1>
+
+    <form action="{% url 'level5_app:user_login' %}" method="POST">
+        {% csrf_token %}
+        <label for="Username">Username:</label>
+        <input type="text" name="username" placeholder="Enter your username">
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder=" enter your password here">
+        <input type="submit" name="" value="Login" class="btn btn-primary">
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
